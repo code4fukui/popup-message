@@ -86,11 +86,9 @@ class PopupMessage extends HTMLElement {
     
     // close
     const close = () => {
-      console.log("cl", delayms)
       unlockScroll();
       bg.style.opacity = 0;
-      this.hidden = true;
-      //setTimeout(() => { this.hidden = true; }, delayms);
+      setTimeout(() => { this.hidden = true; }, delayms);
     };
     bg.onclick = (e) => {
       if (e.target == bg) {
